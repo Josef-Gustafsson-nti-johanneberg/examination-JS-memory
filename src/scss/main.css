@@ -17,16 +17,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #000000;
 }
 
-body h1 {
-  text-align: center;
-  background-color: pink;
+body header img {
+  height: 20vw;
   width: 100vw;
-  height: 20vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body h2 {
+  color: white;
 }
 
 body section {
+  margin-top: 10px;
   max-width: 650px;
   background-color: blue;
   width: 85%;
@@ -47,11 +53,16 @@ body section {
           align-items: center;
 }
 
+body section article {
+  border: black solid 3px;
+}
+
 body section article img {
   max-width: 100px;
+  opacity: 0%;
 }
 
 body section .clicked {
-  opacity: 50%;
+  opacity: 100%;
 }
 /*# sourceMappingURL=main.css.map */

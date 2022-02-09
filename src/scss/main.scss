@@ -8,14 +8,22 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1{
-        text-align: center;
-        background-color: pink;
-        width: 100vw;
-        height: 20vh;
+    background-color: #000000;
+    header{
+
+        img{
+            height: 20vw;
+            width: 100vw;
+            object-fit: cover;
+            // object-position: 0px 50px 0px 50px; 
+        }
+    }
+    h2{
+        color: white;
     }
 
     section{
+        margin-top: 10px;
         max-width: 650px;
         background-color: blue;
         width: 85%;
@@ -28,13 +36,17 @@ body{
         justify-content: space-around;
         align-items: center;
         article{
+            border: black solid 3px;
+
             img{
                 max-width: 100px;
+                opacity: 0%;
+
             }
 
         }
         .clicked{
-            opacity: 50%;
+            opacity: 100%;
         }
 
     }
