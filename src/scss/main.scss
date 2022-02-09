@@ -12,7 +12,7 @@ body{
     header{
 
         img{
-            height: 20vw;
+            height: 18vw;
             width: 100vw;
             object-fit: cover;
             // object-position: 0px 50px 0px 50px; 
@@ -24,7 +24,7 @@ body{
 
     section{
         margin-top: 10px;
-        max-width: 650px;
+        max-width: 750px;
         background-color: blue;
         width: 85%;
         background: #716f71;
@@ -35,6 +35,7 @@ body{
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+        gap: 5px;
         article{
             border: black solid 3px;
 
