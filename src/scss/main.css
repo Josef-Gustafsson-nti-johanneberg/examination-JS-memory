@@ -21,7 +21,7 @@ body {
 }
 
 body header img {
-  height: 18vw;
+  height: 32vh;
   width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
@@ -32,9 +32,8 @@ body h2 {
 }
 
 body section {
-  margin-top: 10px;
-  max-width: 750px;
-  background-color: blue;
+  margin-top: 1rem;
+  max-width: 50vw;
   width: 85%;
   background: #716f71;
   padding: 1rem;
@@ -56,10 +55,13 @@ body section {
 
 body section article {
   border: black solid 3px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 body section article img {
   max-width: 100px;
+  max-height: 100px;
   opacity: 0%;
 }
 
