@@ -8,40 +8,46 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #DDBEA8;
     header{
-        img{
-            height: 32vh;
-            width: 100vw;
-            object-fit: cover;
+        width: 100%;
+        // img{
+        //     height: 32vh;
+        //     width: 100%;
+        //     object-fit: cover;
+        // }
+        h1{
+            text-align: center;
+            color: white;
+            font-size: 9rem;
         }
+    
     }
     h2{
         color: white;
     }
-
+    h3{
+        font-size: 3rem;
+    }
+    .won{
+        grid-template-columns: 1fr;
+    }
     section{
         margin-top: 1rem;
-        max-width: 50vw;
-        width: 85%;
-        background: #716f71;
+        background: #368F8B;
         padding: 1rem;
         border-radius: 4px;
         box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        gap: 5px;
+        gap: .3rem;
+        display: grid;
+        grid-template-columns: repeat(6, 5rem);
         article{
-            border: black solid 3px;
-// här är något konstigt
-            max-width: 100px;
-            max-height: 100px;
-
+            background-color: #160F29;
+            width: 5rem;
+            height: 5rem;
             img{
-                max-width: 100px;
-                max-height: 100px;
+                width: 5rem;
+                height: 5rem;
                 opacity: 0%;
 
             }

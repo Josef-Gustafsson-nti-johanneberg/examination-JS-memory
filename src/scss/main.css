@@ -17,51 +17,55 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #000000;
+  background-color: #DDBEA8;
 }
 
-body header img {
-  height: 32vh;
-  width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+body header {
+  width: 100%;
+}
+
+body header h1 {
+  text-align: center;
+  color: white;
+  font-size: 9rem;
 }
 
 body h2 {
   color: white;
 }
 
+body h3 {
+  font-size: 3rem;
+}
+
+body .won {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
 body section {
   margin-top: 1rem;
-  max-width: 50vw;
-  width: 85%;
-  background: #716f71;
+  background: #368F8B;
   padding: 1rem;
   border-radius: 4px;
   -webkit-box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
           box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5px;
+  gap: .3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (5rem)[6];
+      grid-template-columns: repeat(6, 5rem);
 }
 
 body section article {
-  border: black solid 3px;
-  max-width: 100px;
-  max-height: 100px;
+  background-color: #160F29;
+  width: 5rem;
+  height: 5rem;
 }
 
 body section article img {
-  max-width: 100px;
-  max-height: 100px;
+  width: 5rem;
+  height: 5rem;
   opacity: 0%;
 }
 
