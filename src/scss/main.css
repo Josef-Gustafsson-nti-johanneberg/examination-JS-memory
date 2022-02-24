@@ -34,10 +34,6 @@ body h2 {
   color: white;
 }
 
-body h3 {
-  font-size: 3rem;
-}
-
 body .won {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;

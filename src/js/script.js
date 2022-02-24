@@ -1,11 +1,10 @@
 let amount_of_cards = 24;
 let data = [];
-let match_id = 0;
 let point = 0;
 let matched = 0;
 let is_clicked = [];
 // Skapa en array med alla kort i
-for(let i=amount_of_cards; i > 0; i--){
+for(let i=amount_of_cards, match_id = 0; i > 0; i--){
     if(i%2 == 0){
         match_id ++
     }
@@ -21,8 +20,8 @@ for(let i=amount_of_cards; i > 0; i--){
 // Blanda om min array med mina kort
 function randomize_array(array){
     for(let i=array.length-1; i > 0; i--){
-        const j = Math.floor(Math.random() * i)
-        const temp = array[i]
+        let j = Math.floor(Math.random() * i)
+        let temp = array[i]
         array[i] = array[j]
         array[j] = temp
     }
@@ -35,13 +34,13 @@ function render(){
         el.innerHTML = `<img id= brick_id_${brick.id} src="${brick.img}" alt="bild_${brick.id}">`;
         el.addEventListener("click", () =>{
             if(brick.matched != true){
-            is_clicked.push(brick);
-            is_clicked.at(-1).flipped = true
-            turn_card()
-            time_to_check()
+                is_clicked.push(brick);
+                is_clicked.at(-1).flipped = true
+                turn_card()
+                time_to_check()
             }
         });
-        document.querySelector('#x').append(el);
+        document.querySelector('section').append(el);
     }
 }
 // En funktion som körs varje gång en bild klickas på, om bilden har ____ flipped == true så läggs en klass clicked på och i css så blir opacity 100% igen
@@ -67,7 +66,7 @@ function time_to_check(){
 }
 // Kollar om båda korten är samma och sätter matched till true isåfall, annars vänds korten tillbaka vid nästa klick
 function check_if_same(){
-    if (is_clicked[0].match_id === is_clicked[1].match_id){
+    if(is_clicked[0].match_id === is_clicked[1].match_id){
         is_clicked[0].matched = true
         is_clicked[1].matched = true
         matched ++
@@ -75,20 +74,18 @@ function check_if_same(){
     } else{
         is_clicked[0].flipped = false
         is_clicked[1].flipped = false
-
         point ++
-        document.querySelector('#score').innerHTML = `Antal försök ${point}`;
+        document.querySelector('#score').innerHTML = `Antal försök: ${point}`;
     }
     is_clicked = []
 }
+// kollar om man har matchat alla korten
 function is_won(){
     if(matched === amount_of_cards/2){
-        console.log("game won")
-        document.querySelector(`#x`).classList.add('won')
-        document.querySelector('#x').innerHTML = `<h3>Grattis du vann på ${point} misslyckade försök</h3>`;
+        document.querySelector(`section`).classList.add('won')
+        document.querySelector('section').innerHTML = `<h3>Grattis du vann på ${point} misslyckade försök</h3>`;
     }
 }
 
 randomize_array(data);
-document.querySelector('#score').innerHTML = `Antal försök ${point}`;
 render();
